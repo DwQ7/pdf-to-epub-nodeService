@@ -1,0 +1,73 @@
+/*菜单*/
+#menu {
+  font:16px verdana, arial, sans-serif;
+  width: 100%;
+}
+#menu, #menu li {
+  list-style:none;
+  padding:0;
+  margin:0;
+  float: left;
+  text-align: center;
+}
+#menu li a {
+  display:inline;
+  margin: 55px;
+  width:10px;
+  height:30px;
+  line-height:50px;
+  text-align:center;
+  color:gray;
+  text-decoration:none;
+}
+#menu li a:hover{
+  color: black;
+}
+/*左边内容*/
+.left-content
+{
+  float: left;
+  /*width:50%;*/
+
+}
+/*右边内容*/
+.right-content{
+  /*right:100px;*/
+  margin-top: 50px;
+  position: relative;
+  float: right;
+  margin-right: 150px;
+  overflow: hidden;
+  /*width: 35%;*/
+}
+.content{
+  overflow: hidden;
+}
+
+.r-left{
+  float: left;
+  margin-right: 25px;
+  overflow: hidden;
+  color: gray;
+}
+.r-right{
+  right: 10px;
+  overflow: hidden;
+}
+
+.l-right{
+  margin-top: 40px;
+  overflow: hidden;
+  width: 200px;
+  height:220px;
+  float: right;
+}
+
+.l-left{
+  margin-right:100px;
+  float:left;
+  overflow: hidden;
+}
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="multipart/form-data" charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/index1.css">
+    <script src="./javascripts/lib/jquery-3.3.1.min.js"></script>
+<!--    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>-->
+<!--    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>-->
+</head>
+<body>
+<div id="container">
+    <ul id = "menu" class = "list-inline">
+        <li ><a href = "#">勤</a></li>
+        <li ><a href = "#">定</a></li>
+        <li ><a href = "#">旺</a></li>
+        <li ><a href = "#">软</a></li>
+        <li ><a href = "#">件</a></li>
+        <li ><a href = "#">工</a></li>
+        <li ><a href = "#">程</a></li>
+        <li ><a href = "#">二</a></li>
+        <li ><a href = "#">零</a></li>
+        <li ><a href = "#">二</a></li>
+        <li ><a href = <%=home_url %> id="login"><%=username %></a></li>
+        <li ><a href = "#">C#</a></li>
+    </ul>
+</div>
+<hr/>
+
+<!--<form action="upload.ashx" method="post" enctype="multipart/form-data">-->
+<!--    选择文件:<input type="file" name="file1" /><br />-->
+<!--    <input type="submit" value="上传" />-->
+<!--</form>-->
+
+<form id="uploadForm" enctype="multipart/form-data" >
+    文件:<input id="pdfFile" type="file" name="pdfFile" />
+</form>
+<button id="upload">上传文件</button>
+
+<button id="test">test</button>
+
+</div>
+</body>
+<script src="./javascripts/home.js" type="module"></script>
+</html>
