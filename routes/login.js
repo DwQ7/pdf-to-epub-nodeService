@@ -12,7 +12,7 @@ router.get('/',(req,res)=>{
     if(req.session.username){
         res.redirect('/home');
     }else{
-        res.render('logo.html');
+        res.render('login.html');
     }
 })
 
@@ -29,7 +29,7 @@ router.post('/Log',(req,res)=>{
             result = JSON.parse(result);//把results字符串转为json对象
             if(result[0].password === body.password){
                 req.session.username = body.username;
-                res.send("ok");
+                res.send(body.username);
             }else{
                 res.send("err");
                 console.log(result[0].password);
