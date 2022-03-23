@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="jqueryui/style.css">
     <style>
         img { width: 200px; height: 200px; }
-
+        button{text-align: center}
     </style>
     <script>
         $(function() {
             // 运行当前选中的特效
-            function runEffect() {
+            function Fade() {
                 // 从中获取特效类型
                 var selectedEffect = $( "#effectTypes" ).val();
-
                 // 大多数的特效类型默认不需要传递选项
                 var options = {};
                 // 一些特效带有必需的参数
@@ -26,32 +25,57 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // 运行特效
-                $( "#effect" ).hide( selectedEffect, options, 1000, callback );
+                $( "#effect" ).hide( selectedEffect, options, 1000, callback_fade );
             };
-
             // 回调函数
-            function callback() {
+            function callback_fade() {
                 setTimeout(function() {
                     $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+                }, 10000 );
+                Out();
+            };
+            function Out() {
+                // 从中获取特效类型
+                var selectedEffect = $( "#effectTypes" ).val();
+                // 大多数的特效类型默认不需要传递选项
+                var options = {};
+                // 一些特效带有必需的参数
+                if ( selectedEffect === "scale" ) {
+                    options = { percent: 100 };
+                } else if ( selectedEffect === "size" ) {
+                    options = { to: { width: 280, height: 185 } };
+                }
+                // 运行特效
+                $( "#effect1" ).show( selectedEffect, options, 500,callback_out());
+            };
+
+            //回调函数
+            function callback_out() {
+                setTimeout(function() {
+                    $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
                 }, 1000 );
             };
             // 根据选择菜单值设置特效
             $( "#button" ).click(function() {
-                runEffect();
+                Fade();
+
                 return false;
             });
-
-
+            $( "#effect1" ).hide();
         });
     </script>
 </head>
 <body>
 
 
-    <div id="effect" class="ui-widget-content ui-corner-all">
-        <img src="/public/images/files.png" >
-    </div>
+<div id="effect" class="ui-widget-content ui-corner-all">
+    <img src="/public/images/files.png" >
+</div>
+
+<div id="effect1" class="ui-widget-content ui-corner-all">
     <img src="/public/images/logo.png">
+</div>
+
 
 <select name="effects" id="effectTypes">
     <option value="blind">百叶窗特效（Blind Effect）</option>
