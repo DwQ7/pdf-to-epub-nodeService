@@ -48,6 +48,7 @@ const usersRouter = require('./routes/user');
 const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
 const Router = require("./routes/router");
+const transitionRouter = require("./routes/transition");
 
 //用于记录用户
 app.use(session({
@@ -73,17 +74,27 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// app.use(function(req, res, next) {
+//   let url=req.originalUrl
+//   if (url !== "/login" && !req.session.username) {
+//     return res.redirect("/login");
+//   }
+//   next();
+// });
 
 //配置路由
 app.use('/login',loginRouter);
 app.use('/user', usersRouter);
 app.use('/register',registerRouter);
+app.use('/transition',transitionRouter);
 app.use('/',Router);
 
 
 app.get('/home',(req,res)=>{
   res.render('index.html');
 });
+
+
 
 
 //错误时后的中间件
