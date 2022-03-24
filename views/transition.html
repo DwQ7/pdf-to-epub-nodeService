@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/transition.css">
+    <script src="./javascripts/lib/jquery-3.3.1.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="logo">
+                <img src="./images/logo.png" alt="logo">
+
+            </div>
+            <div class="h_title">
+                <img src="./images/title.png" alt="">
+
+            <div class="user">
+                <img src="./images/user.png" alt="">
+                <a href="/login" id="user">未登录</a>
+            </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="nav">
+                <ul>
+                    <li class="nav_li">
+                        <a href=""><div class="nav_ziti">文件转换</div></a>
+                    </li>
+                    <li class="nav_li">
+                        <a href=""><div class="nav_ziti">历史转换记录</div></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="main_content">
+                <div class="main_left">
+                   <div class="left_top"> 
+                       <p>请选择需要转换的文件</p>
+                       <input type=button" id="choose_file" value="选择文件" name="chooce_files">
+                   </div>
+                   <div class="left_main"></div>
+                   <div class="left_buttom">
+                       <div class="check-box">
+                        <input type="checkbox" id="check_box"  name="hebing" value="hebing">是否合并
+                       </div>
+                       <button id="upload">
+                           开始上传
+                       </button>
+                   </div>
+                </div>
+                <div class="main_right" id="up_effect">
+                    <img src="./images/up.png" >
+                </div>
+                <div class="main_right" id="trans_effect">
+                    <img src="./images/trans.png" >
+                </div>
+            </div>
+        
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+</body>
+<script src = "./javascripts/transition.js" type="module"></script>
+</html>
