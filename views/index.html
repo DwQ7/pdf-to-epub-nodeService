@@ -19,7 +19,7 @@
             </div>
             <div class="user">
                 <img src="../images/user.png" alt="" >
-                <a href = <%=home_url %> id="login"><%=username %></a>
+                <a href="/login" id="user" >未登录</a>
             </div>
         </div>
         <div id="main">
@@ -42,10 +42,11 @@
 <!--                            选择文件-->
 <!--                        </button>-->
                             <p>请选择你需要转化的文件</p>
-                        <form id="uploadForm" enctype="multipart/form-data" >
-                            <input id="pdfFile" type="file" name="pdfFile" class="choose_file"/>
-                        </form>
-                        <button id="upload">上传文件</button>
+                            <button class="choose_file">开始</button>
+<!--                        <form id="uploadForm" enctype="multipart/form-data" >-->
+<!--                            <input id="pdfFile" type="file" name="pdfFile" class="choose_file"/>-->
+<!--                        </form>-->
+<!--                        <button id="upload">上传文件</button>-->
                     </div>
                 </div>
                 <div class="main_right">
@@ -58,6 +59,6 @@
         </div>
     </div>
 </body>
-<script src = "./javascripts/config.js" type="module"></script>
+
 <script src = "./javascripts/home.js" type="module"></script>
 </html>
