@@ -1,7 +1,13 @@
 $(function () {
-    $("#upload").on('click',function () {
-        console.log(sessionStorage.getItem('username'));
+    console.log(sessionStorage.username);
+    $('#user').text(sessionStorage.username);
+    if(sessionStorage.username){
+        $('#user').attr('href','/user');
+    }
 
+    $("#upload").on('click',function () {
+        window.location.href = '/transition'
+        console.log(sessionStorage.getItem('username'));
         let pdfFile = $('#pdfFile')[0].files[0];
         if(pdfFile){
             const formData =  new FormData($('#uploadForm')[0]);
@@ -24,14 +30,7 @@ $(function () {
             window.alert("请选择文件");
         }
     });
-    $('#test').on('click',function () {
-        console.log(sessionStorage);
-        $.ajax({
-            type:'GET',
-            url:'/apis/test',
-            success:function (res) {
-                console.log(res);
-            }
-        })
+    $('.choose_file').on('click',function () {
+        window.location.href = "/transition"
     })
 })
