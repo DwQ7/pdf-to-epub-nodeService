@@ -142,6 +142,7 @@ a{
 .left_main{
     clear: both;
     height: 65%;
+    white-space: pre-line;
 }
 .left_buttom{
     height: 12%;

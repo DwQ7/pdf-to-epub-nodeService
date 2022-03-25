@@ -32,7 +32,7 @@
                         <a href=""><div class="nav_ziti">文件转换</div></a>
                     </li>
                     <li class="nav_li">
-                        <a href=""><div class="nav_ziti">历史转换记录</div></a>
+                        <a href="/user"><div class="nav_ziti">历史转换记录</div></a>
                     </li>
                 </ul>
             </div>
@@ -40,9 +40,14 @@
                 <div class="main_left">
                    <div class="left_top"> 
                        <p>请选择需要转换的文件</p>
-                       <input type=button" id="choose_file" value="选择文件" name="chooce_files">
+<!--                       <input type=button" id="choose_file" value="选择文件" name="chooce_files">-->
+                       <form id="uploadForm" enctype="multipart/form-data" >
+                           <input id="pdfFile" type="file" name="pdfFile" class="choose_file" multiple="multiple" style="color: transparent;"/>
+                       </form>
                    </div>
-                   <div class="left_main"></div>
+                   <div class="left_main">
+
+                   </div>
                    <div class="left_buttom">
                        <div class="check-box">
                         <input type="checkbox" id="check_box"  name="hebing" value="hebing">是否合并
