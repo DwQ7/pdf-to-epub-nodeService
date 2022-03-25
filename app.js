@@ -52,10 +52,10 @@ const transitionRouter = require("./routes/transition");
 
 //用于记录用户
 app.use(session({
-  secret: 'this is string key',   // 可以随便写。 一个 String 类型的字符串，作为服务器端生成 session 的签名
+  secret: 'this is string key',   // 可以随便写。 一个 String 类型的字符串，作为服务器端生成 session.js 的签名
   //name:'admin',/*保存在本地cookie的一个名字 默认connect.sid  可以不设置*/
-  resave: false,   /*强制保存 session 即使它并没有变化,。默认为 true。建议设置成 false。*/
-  saveUninitialized: true,   //强制将未初始化的 session 存储。  默认值是true  建议设置成true
+  resave: false,   /*强制保存 session.js 即使它并没有变化,。默认为 true。建议设置成 false。*/
+  saveUninitialized: true,   //强制将未初始化的 session.js 存储。  默认值是true  建议设置成true
   cookie: {
     maxAge:500000    /*过期时间*/
   },   /*secure https这样的情况才可以访问cookie*/
@@ -76,7 +76,7 @@ app.use(cookieParser());
 
 // app.use(function(req, res, next) {
 //   let url=req.originalUrl
-//   if (url !== "/login" && !req.session.username) {
+//   if (url !== "/login" && !req.session.js.username) {
 //     return res.redirect("/login");
 //   }
 //   next();

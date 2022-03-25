@@ -11,7 +11,6 @@ router.get('/',(req,res)=>{
             username:req.session.username,
             home_url:"./user"
         });
-        // res.send(req.session.username);
     }else{
         console.log('no');
         res.render('index.html',{
