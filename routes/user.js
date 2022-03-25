@@ -7,7 +7,7 @@ router.get('/',(req,res)=>{
         res.render('user.html',{
             username:req.session.username
         });
-        // res.send('你好'+req.session.username+'欢迎回来');
+        // res.send('你好'+req.session.js.username+'欢迎回来');
 
 })
 module.exports = router;
