@@ -1,106 +1,21 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-#container{
-    background-image: url(../images/back.png) ;
-    background-repeat: no-repeat;
-    background-position: 93% 10%;
-    background-size:  37%;
-}
-#header{
-    padding-top: 23px;
-    margin-bottom: 30px;
-    padding-bottom: 5px;
-    overflow: hidden;
-    margin-bottom: 1px;
-}
-#header:hover,#header:active{
-    border-bottom: 1px solid rgba(238, 233, 233, 0.897);
-    margin-bottom: 0px;
-}
-.logo img{
-    height: 55px;
-    float: left;
-    margin-left: 100px;
-}
-.h_title img{
-    height: 40px;
-    float: left;
-    margin-top: 9px;
-    margin-left: 20px;
-}
-.user{
-    float: right;
-    margin-right: 25px;
-    /* margin-top: 5px; */
-}
-.user img{
-    width: 35px;
-    margin-top: 14px;
-}
-#main{
-    overflow: hidden;
-    width: 100%;
-}
-#nav{
-    width: 6%;
-    float: left;
-    margin-left: 30px;
-    border-right: 1px solid #ccc;
-    margin-top: 20px;
-}
+
 #main_content{
-    float: left;
-    width: 85%;
     height: 100vh;
     margin-left: 10px;
     overflow: hidden;
 }
-#nav ul{
-    list-style-type:none;
-    margin-top:25px;
-    padding:0;
-}
-#nav ul li{
-    margin-bottom: 25px;
-    width: 20px;
-}
-li a{
-    display:block;
-    background-color:white;
-    color:black; 
-    width:20px; 
-    text-align:center;
-    padding:4px;
-    text-decoration:none;
-}
-.nav_ziti{
-    width: 27px;  
-    padding: 3px;
-    /* margin: 0 auto;   */
-    line-height: 24px;  
-    font-size: 20px;
-}
-.nav_ziti:hover,.nav_ziti:active{
-    border-radius:14px;
-    background: #005AA7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, rgb(255, 255, 255), #8ecae6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #ffffff, #8ecae6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+
+.main_right{
+    width: 42%;
+    margin-top: 60px;
 }
 .main_left{
-    width: 55%;
-    float: left;
+    width: 53%;
 }
 .main_left img{
-    margin-top: 70px;
+    margin-top: 100px;
     width: 100%;
     margin-left:0px;
-}
-.main_right{
-    width: 38%;
-    float:left ;
 }
 .form1{
     display: flex;
@@ -110,11 +25,14 @@ li a{
     margin-top: 0px;
     margin-left: 50px;
 }
+.form1 h1{
+    margin-bottom: 10px;
+}
 form{
     /* border: #ccc solid 1px; */
     border-radius: 10px;
     height: 45vh;
-    width: 87%;
+    width: 82%;
     margin-top: 15px;
     display: flex;
     flex-direction: column;
