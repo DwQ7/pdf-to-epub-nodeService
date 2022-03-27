@@ -1,0 +1,35 @@
+.xiazai{
+    margin-top: 55px;
+    width: 95%;
+    border: 5px solid rgba(208, 219, 245);
+    height: 100px;
+    height: 400px;
+    border-radius: 10px;
+
+}
+.download{
+    height: 70%;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.download p{
+    margin-bottom: 10px;
+}
+.down_but{
+    display: flex;
+    justify-content: space-around;
+}
+.down_but button{
+    padding: 6px 24px 6px 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #0056d7;
+    border-radius: 5px;
+    border: 0px;
+}
+.main_right img{
+    margin-top: 65px;
+    margin-left: 140px;
+    width: 47%;
+}
