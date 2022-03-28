@@ -11,6 +11,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const session = require('express-session');
 const { createProxyMiddleware } = require('http-proxy-middleware');
+const fs = require('fs');
 const bodyParser = require('body-parser');
 const proxy = require('express-http-proxy');
 
@@ -31,6 +32,10 @@ app.all("*",function(req,res,next){
   else
     next();
 })
+// app.all("*",(req,res,next)=>{
+//   res.header('Content-Type','text/html;charset=utf-8');
+//   next();
+// })
 //设置代理，主要用于调用后端提供的接口
 const options = {
   target: 'http://localhost:9527', // 目标服务器 host
@@ -49,6 +54,7 @@ const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
 const Router = require("./routes/router");
 const transitionRouter = require("./routes/transition");
+const downloadRouter = require("./routes/download");
 
 //用于记录用户
 app.use(session({
@@ -87,7 +93,14 @@ app.use('/login',loginRouter);
 app.use('/user', usersRouter);
 app.use('/register',registerRouter);
 app.use('/transition',transitionRouter);
+app.use('/download',downloadRouter);
 app.use('/',Router);
+
+
+app.get('*',(req,res,next)=>{
+  res.header("Content-Type", "text/html; charset=utf-8");
+  next();
+})
 
 
 app.get('/home',(req,res)=>{
