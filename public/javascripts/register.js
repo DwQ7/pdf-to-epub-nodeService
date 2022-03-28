@@ -1,4 +1,5 @@
-$($(function () {
+($(function () {
+    //事件监听
     $('#btnRegister').on('click',function () {
         console.log(111);
         const username = $("#email").val();
