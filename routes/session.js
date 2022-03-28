@@ -22,7 +22,8 @@ function hasKey(key){//session中是否存在指定key
     return true;
 }
 
-export default{
+
+module.exports = {
     setSession,
     getSession,
     clearSession,
