@@ -1,4 +1,4 @@
-import session from "../session.js";
+import session from "../utils/session.js";
 
 class History{
     constructor(fileName,filePath,successDate){
@@ -7,9 +7,6 @@ class History{
         this.successDate = successDate;
     }
 }
-let histories = []
-session.setSession("history",histories);
 export default {
     History,
-    histories
 }
