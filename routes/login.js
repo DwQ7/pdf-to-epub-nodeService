@@ -7,17 +7,8 @@ const userSQL = require('../db/usersql');
 
 const pool = mysql.createPool(dbConfig.mysql);
 
-//跳转登录页面
-router.get('/',(req,res)=>{
-    if(req.session.username){
-        res.redirect('/home');
-    }else{
-        res.render('login.html');
-    }
-})
-
 //登录
-router.post('/Log',(req,res)=>{
+router.post('/',(req,res)=>{
     //获取客户端发来的数据
     let body = req.body;
     pool.getConnection(function (err,connection) {

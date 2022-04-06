@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pdf-to-epub-web.iml" filepath="$PROJECT_DIR$/.idea/pdf-to-epub-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pdf-to-epub-nodeService.iml" filepath="$PROJECT_DIR$/.idea/pdf-to-epub-nodeService.iml" />
     </modules>
   </component>
 </project>

@@ -14,7 +14,7 @@ router.get('/',(req,res)=>{
     res.render('register.html');
 })
 
-router.post('/Reg',(req,res)=>{
+router.post('/',(req,res)=>{
     let body = req.body;
     pool.getConnection(function (err,connection) {
         connection.query(userSQL.queryAll,function (err,result) {
@@ -58,7 +58,5 @@ router.post('/Reg',(req,res)=>{
         })
     })
 })
-router.get('/?',(req,res)=>{
-    res.next();
-})
+
 module.exports = router;
